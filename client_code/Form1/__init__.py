@@ -7,3 +7,10 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    def send_image_to_colab(image):
+    # Call the function in your Colab notebook
+    result = anvil.server.call('call_colab_function', image)
+    print(result) 

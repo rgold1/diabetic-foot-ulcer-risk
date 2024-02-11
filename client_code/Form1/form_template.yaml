@@ -7,6 +7,20 @@ components:
   properties: {}
   name: content_panel
   layout_properties: {slot: default}
+  components:
+  - name: image_1
+    properties: {}
+    type: Image
+    layout_properties: {grid_position: 'GEPKPT,AZVMPM'}
+  - name: label_1
+    properties: {icon: '', text: Upload Your Image Here, align: center}
+    type: Label
+    layout_properties: {grid_position: 'QDFPLE,WNAXIJ'}
+  - name: button_1
+    properties: {text: GO}
+    type: Button
+    layout_properties: {grid_position: 'NRMIQP,JBIFTA'}
+    event_bindings: {click: button_1_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
