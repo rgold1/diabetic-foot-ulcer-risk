@@ -1,27 +1,39 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', role: headline}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: image_1
-    properties: {}
-    type: Image
-    layout_properties: {grid_position: 'GEPKPT,AZVMPM'}
-  - name: label_1
-    properties: {icon: '', text: Upload Your Image Here, align: center}
-    type: Label
-    layout_properties: {grid_position: 'QDFPLE,WNAXIJ'}
-  - name: button_1
-    properties: {text: GO}
-    type: Button
-    layout_properties: {grid_position: 'NRMIQP,JBIFTA'}
-    event_bindings: {click: button_1_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: file_loader_1
+    properties: {}
+    type: FileLoader
+- type: ColumnPanel
+  properties: {}
+  name: content_panel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: name
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'REGDYI,ODINXC'}
+  - name: label_1
+    properties: {icon: '', text: what is your name, align: center}
+    type: Label
+    layout_properties: {grid_position: 'REGDYI,ZDHKKV'}
+  - name: button_1
+    properties: {text: GO}
+    type: Button
+    layout_properties: {grid_position: 'RRLZJB,BALJUF'}
+    event_bindings: {click: button_1_click}
+  - name: result
+    properties: {align: left, text: 'Result:', visible: false}
+    type: Label
+    layout_properties: {grid_position: 'OIYASO,IXETFW'}
+- name: image_1
+  properties: {height: 329.33331298828125}
+  type: Image
+  layout_properties: {slot: default}

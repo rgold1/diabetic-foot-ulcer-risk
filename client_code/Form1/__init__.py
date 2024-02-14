@@ -1,5 +1,6 @@
 from ._anvil_designer import Form1Template
 from anvil import *
+import anvil.server
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -8,9 +9,17 @@ class Form1(Form1Template):
 
     # Any code you write here will run before the form opens.
 
+
+
   def button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    def send_image_to_colab(image):
-    # Call the function in your Colab notebook
-    result = anvil.server.call('call_colab_function', image)
-    print(result) 
+    # Get the text input from the text box
+    text_input = self.name.text
+    result = anvil.server.call('main', text_input)
+    if result:
+        self.result.visible = True 
+        self.result.text = result.capitalize()
+  
+
+
+
+
