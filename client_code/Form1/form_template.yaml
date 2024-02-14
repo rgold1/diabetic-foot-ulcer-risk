@@ -24,6 +24,11 @@ components:
     properties: {icon: '', text: what is your name, align: center}
     type: Label
     layout_properties: {grid_position: 'REGDYI,ZDHKKV'}
+  - name: file_loader_2
+    properties: {}
+    type: FileLoader
+    layout_properties: {grid_position: 'PASSNG,RWKUEN'}
+    event_bindings: {change: file_loader_2_change}
   - name: button_1
     properties: {text: GO}
     type: Button
