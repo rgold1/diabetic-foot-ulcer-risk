@@ -38,6 +38,10 @@ components:
     properties: {align: left, text: 'Result:', visible: false}
     type: Label
     layout_properties: {grid_position: 'OIYASO,IXETFW'}
+  - name: img_r
+    properties: {visible: false}
+    type: Label
+    layout_properties: {grid_position: 'ZFSXWC,MVZAKD'}
 - name: image_1
   properties: {height: 329.33331298828125}
   type: Image
