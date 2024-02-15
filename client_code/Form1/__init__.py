@@ -24,8 +24,30 @@ class Form1(Form1Template):
     if result:
       self.img_r.visible=True
       self.img_r.text=result
-      
     print(result)
+
+  def classify_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    # Get the file data from the FileLoader component
+    file_data = self.file_loader_2.file
+    
+    if file_data:
+        # An image was sent
+        print("Image sent")
+        # Pass the file data to the 'main' function on the server side
+        result = anvil.server.call('main', file_data)
+        
+        if result:
+            self.img_r.visible = True
+            self.img_r.source = result  # Assuming 'result' contains the URL of the image
+        print(result)
+    else:
+        # No image was sent
+        print("No image sent")
+
+    
+    
+    
   
 
 
