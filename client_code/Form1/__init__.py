@@ -29,6 +29,7 @@ class Form1(Form1Template):
   def classify_click(self, **event_args):
     """This method is called when the button is clicked"""
     # Get the file data from the FileLoader component
+    
     file_data = self.file_loader_2.file
     
     if file_data:
