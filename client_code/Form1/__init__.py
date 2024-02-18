@@ -7,7 +7,8 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-
+    email_address = "rinagoldberg13@gmail.com"
+    anvil.server.call('send_email', email_address)
 
 
   def button_1_click(self, **event_args):
@@ -45,8 +46,12 @@ class Form1(Form1Template):
     else:
         # No image was sent
         print("No image sent")
+   
+  from email_sender import send_email
 
-    
+email_sender.send_email(to='rinagoldberg13@gmail.com', subject='Hello', body='This is a test email!')
+
+
     
     
   
