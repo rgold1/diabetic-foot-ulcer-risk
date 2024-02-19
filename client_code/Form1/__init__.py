@@ -20,11 +20,6 @@ class Form1(Form1Template):
 
   def file_loader_2_change(self, file, **event_args):
     """This method is called when a new file is loaded into this FileLoader"""
-    result = anvil.server.call('classify_image', file)
-    if result:
-      self.img_r.visible=True
-      self.img_r.text=result
-    print(result)
 
   def classify_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -39,7 +34,9 @@ class Form1(Form1Template):
         # An image was sent
         print("Image sent")
         # Pass the file data to the 'main' function on the server side
-        result=anvil.server.call('main', f_name,f_name,l_name)
+        result=anvil.server.call('main', file_data,f_name,l_name,email)
+    if result:
+      print(result)
     if result=="Success":
       self.result.visible=True
       self.result.text="The results have been sent to you by email to "+email
