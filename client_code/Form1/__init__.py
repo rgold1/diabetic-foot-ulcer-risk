@@ -35,11 +35,6 @@ class Form1(Form1Template):
         print("Image sent")
         # Pass the file data to the 'main' function on the server side
         result=anvil.server.call('main', file_data,f_name,l_name,email)
-    if result:
-      print(result)
-    if result=="Success":
-      self.result.visible=True
-      self.result.text="The results have been sent to you by email to "+email
 
 
         

@@ -4,8 +4,9 @@ container:
   properties: {html: '@theme:standard-page.html', role: headline, background: '#fa4c44'}
 components:
 - name: label_2
-  properties: {text: Diabetic Wound Risk Predicter, align: center, background: '#fa4c44',
-    spacing_above: none, spacing_below: large, bold: true}
+  properties: {text: Early diagnosis of chronic wound severity in diabetic patients using simple camera image analysis,
+    align: right, background: '#F44336', spacing_above: none, spacing_below: large,
+    bold: true}
   type: Label
   layout_properties: {slot: title}
   data_bindings:
