@@ -1,55 +1,55 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', role: headline}
+  properties: {html: '@theme:standard-page.html', role: headline, background: '#fa4c44'}
 components:
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
-  components:
-  - name: file_loader_1
-    properties: {}
-    type: FileLoader
+- name: label_2
+  properties: {text: Diabetic Wound Risk Predicter, align: center, background: '#fba483'}
+  type: Label
+  layout_properties: {slot: title}
 - type: ColumnPanel
-  properties: {}
+  properties: {background: '#fbe6e1'}
   name: content_panel
-  layout_properties: {slot: left-nav}
+  layout_properties: {slot: default}
   components:
   - name: label_1
-    properties: {icon: '', text: 'First name:', align: center}
+    properties: {icon: '', text: 'First name:', align: left}
     type: Label
-    layout_properties: {grid_position: 'REGDYI,RNYTTS SGSQPC,RVJBUO'}
+    layout_properties: {grid_position: 'REGDYI,RNYTTS HJYYID,JPJKWR'}
   - name: label_3
-    properties: {text: 'Last name:', align: center}
+    properties: {text: 'Last name:', align: left}
     type: Label
-    layout_properties: {grid_position: 'REGDYI,RNYTTS MHGDDT,XWPSXA'}
+    layout_properties: {grid_position: 'REGDYI,RNYTTS NWUGMP,DQXJIG'}
   - name: label_5
-    properties: {text: 'Email Adress:', align: center}
+    properties: {text: 'Email Adress:', align: left}
     type: Label
     layout_properties: {grid_position: 'REGDYI,RNYTTS ACDYZQ,BXAQVB'}
-  - name: name
+  - name: f_name
     properties: {}
     type: TextBox
-    layout_properties: {grid_position: 'REGDYI,ODINXC ROUYAE,JWPWBJ'}
-  - name: text_box_1
+    layout_properties: {grid_position: 'REGDYI,ODINXC FZDXBP,MRIVZX'}
+  - name: l_name
     properties: {}
     type: TextBox
-    layout_properties: {grid_position: 'REGDYI,ODINXC SZZDVM,MMDEWS'}
-  - name: text_box_2
+    layout_properties: {grid_position: 'REGDYI,ODINXC CKSKOH,DVIKJO'}
+  - name: email
     properties: {}
     type: TextBox
-    layout_properties: {grid_position: 'REGDYI,ODINXC ZYCQSH,ZUDOGD'}
+    layout_properties: {grid_position: 'REGDYI,ODINXC ICWCCU,UHXDSZ'}
+  - name: image_1
+    properties: {source: _/theme/DiabeticLogo.jpg, height: 226.08334350585938}
+    type: Image
+    layout_properties: {grid_position: 'REGDYI,JDNLSS'}
   - name: label_4
     properties: {text: 'Please upload a clear image of the area you are concerned
         about. We will give you the most accurate concentration of Hbo2, Hb and oxygen
         saturation and send he results to you via email. '}
     type: Label
-    layout_properties: {grid_position: 'TDVRMZ,YESDAE'}
+    layout_properties: {grid_position: 'QRLMHZ,ICXQLA'}
   - name: file_loader_2
     properties: {}
     type: FileLoader
-    layout_properties: {grid_position: 'PASSNG,RWKUEN'}
+    layout_properties: {grid_position: 'XKYKSV,AIPJUL'}
     event_bindings: {change: file_loader_2_change}
   - name: classify
     properties: {text: Calculate, visible: true}
@@ -57,21 +57,8 @@ components:
     layout_properties: {grid_position: 'SQLAVH,UEVHQY'}
     event_bindings: {click: classify_click}
   - name: result
-    properties: {align: left, text: 'Result:', visible: false}
+    properties: {align: left, text: '', visible: false}
     type: Label
-    layout_properties: {grid_position: 'OIYASO,IXETFW'}
-  - name: img_r
-    properties: {visible: false}
-    type: Label
-    layout_properties: {grid_position: 'ZFSXWC,MVZAKD'}
-- name: image_1
-  properties: {height: 329.33331298828125, source: _/theme/DiabeticLogo.jpg, horizontal_align: right,
-    display_mode: shrink_to_fit, background: ''}
-  type: Image
-  layout_properties: {slot: default}
-  data_bindings: []
-- name: label_2
-  properties: {text: Diabetic Wound Risk Predicter, align: center}
-  type: Label
-  layout_properties: {slot: title}
+    layout_properties: {grid_position: 'YNVSIQ,ZFRRGC'}
+  event_bindings: {hide: content_panel_hide}
 custom_component: true
