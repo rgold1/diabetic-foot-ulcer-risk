@@ -4,30 +4,40 @@ container:
   properties: {html: '@theme:standard-page.html', role: headline, background: '#fa4c44'}
 components:
 - name: label_2
-  properties: {text: Diabetic Wound Risk Predicter, align: center, background: '#fba483'}
+  properties: {text: Diabetic Wound Risk Predicter, align: center, background: '#fa4c44',
+    spacing_above: none, spacing_below: large, bold: true}
   type: Label
   layout_properties: {slot: title}
+  data_bindings:
+  - {property: font, code: '', writeback: false}
+  - {property: font_size, code: 'self.item[''20'']', writeback: false}
 - type: ColumnPanel
   properties: {background: '#fbe6e1'}
   name: content_panel
   layout_properties: {slot: default}
   components:
   - name: label_1
-    properties: {icon: '', text: 'First name:', align: left}
+    properties: {icon: '', text: 'First name:', align: left, bold: true, icon_align: right}
     type: Label
-    layout_properties: {grid_position: 'REGDYI,RNYTTS HJYYID,JPJKWR'}
+    layout_properties: {grid_position: 'REGDYI,RNYTTS GXTSPS,DCCLHJ'}
+    data_bindings:
+    - {property: font, code: 'self.item[''Arial'']', writeback: false}
   - name: label_3
-    properties: {text: 'Last name:', align: left}
+    properties: {text: 'Last name:', align: left, bold: true}
     type: Label
     layout_properties: {grid_position: 'REGDYI,RNYTTS NWUGMP,DQXJIG'}
+    data_bindings:
+    - {property: font, code: 'self.item[''Arial'']', writeback: false}
   - name: label_5
-    properties: {text: 'Email Adress:', align: left}
+    properties: {text: 'Email Adress:', align: left, bold: true}
     type: Label
     layout_properties: {grid_position: 'REGDYI,RNYTTS ACDYZQ,BXAQVB'}
+    data_bindings:
+    - {property: font, code: 'self.item[''Arial'']', writeback: false}
   - name: f_name
     properties: {}
     type: TextBox
-    layout_properties: {grid_position: 'REGDYI,ODINXC FZDXBP,MRIVZX'}
+    layout_properties: {grid_position: 'REGDYI,ODINXC YAQXWW,CHTSLD'}
   - name: l_name
     properties: {}
     type: TextBox
@@ -37,22 +47,24 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'REGDYI,ODINXC ICWCCU,UHXDSZ'}
   - name: image_1
-    properties: {source: _/theme/DiabeticLogo.jpg, height: 226.08334350585938}
+    properties: {source: _/theme/DiabeticLogo.jpg, height: 157.75, horizontal_align: left}
     type: Image
-    layout_properties: {grid_position: 'REGDYI,JDNLSS'}
+    layout_properties: {grid_position: 'REGDYI,FOARIX'}
   - name: label_4
     properties: {text: 'Please upload a clear image of the area you are concerned
         about. We will give you the most accurate concentration of Hbo2, Hb and oxygen
-        saturation and send he results to you via email. '}
+        saturation and send he results to you via email. ', bold: true}
     type: Label
     layout_properties: {grid_position: 'QRLMHZ,ICXQLA'}
+    data_bindings:
+    - {property: font, code: 'self.item[''Arial'']', writeback: false}
   - name: file_loader_2
-    properties: {}
+    properties: {bold: true}
     type: FileLoader
     layout_properties: {grid_position: 'XKYKSV,AIPJUL'}
     event_bindings: {change: file_loader_2_change}
   - name: classify
-    properties: {text: Calculate, visible: true}
+    properties: {text: Calculate, visible: true, bold: true}
     type: Button
     layout_properties: {grid_position: 'SQLAVH,UEVHQY'}
     event_bindings: {click: classify_click}
