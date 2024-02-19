@@ -4,7 +4,7 @@ container:
   properties: {html: '@theme:standard-page.html', role: headline, background: '#fa4c44'}
 components:
 - name: label_2
-  properties: {text: Early diagnosis of chronic wound severity in diabetic patients using simple camera image analysis,
+  properties: {text: Early diagnosis of chronic wound severity in diabetic patients- AI analysis of standard camera image,
     align: right, background: '#F44336', spacing_above: none, spacing_below: large,
     bold: true}
   type: Label
@@ -53,8 +53,8 @@ components:
     layout_properties: {grid_position: 'REGDYI,FOARIX'}
   - name: label_4
     properties: {text: 'Please upload a clear image of the area you are concerned
-        about. We will give you the most accurate concentration of Hbo2, Hb and oxygen
-        saturation and send he results to you via email. ', bold: true}
+        about. You will receive a risk assessment regarding the concentration of Hbo2,
+        Hb and oxygen saturation in your email inbox shortly. ', bold: true}
     type: Label
     layout_properties: {grid_position: 'QRLMHZ,ICXQLA'}
     data_bindings:
